@@ -1,7 +1,5 @@
 package String;
 
-import java.util.*;
-
 public class palindrome_or_not {
     public static void isPalindrome(String s) {
         int left = 0;

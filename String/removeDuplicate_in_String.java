@@ -1,6 +1,5 @@
 package String;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 
 public class removeDuplicate_in_String {

@@ -1,7 +1,7 @@
 package Numbers;
 
 public class greatest_of_two_numbers {
-    public static void checkGreater(int num1, int num2) {
+    public static void checkGreater(float num1, float num2) {
         if (num1 > num2) {
             System.out.println(num1 + " is greater");
         } else {
@@ -10,8 +10,8 @@ public class greatest_of_two_numbers {
     }
 
     public static void main(String[] args) {
-        int num1 = 21;
-        int num2 = 12;
+        float num1 = 1.4f;
+        float num2 = 1.2f;
         checkGreater(num1, num2);
     }
 }

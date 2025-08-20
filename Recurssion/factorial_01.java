@@ -1,4 +1,4 @@
-public class factorial {
+public class factorial_01 {
     public static int findfact(int n) {
         if (n == 0) {
             return 1;

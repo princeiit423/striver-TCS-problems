@@ -45,6 +45,7 @@ public class createLL {
         list.add("Name");
         list.add("is");
         list.add("Faiz");
+        list.add("Hussain");
 
         list.print();
 

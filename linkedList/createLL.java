@@ -39,19 +39,10 @@ public class createLL {
 
     public static void main(String[] args) {
         createLL list = new createLL();
-<<<<<<< HEAD
         list.addFirst(1);
         list.addFirst(2);
         list.addFirst(3);
         list.addFirst(4);
-=======
-        list.add("My");
-        list.add("Name");
-        list.add("is");
-        list.add("Faiz");
-        list.add("Hussain");
->>>>>>> f580c2e3b84cf713be584e8d995dea7b601917fa
-
         list.print();
 
     }

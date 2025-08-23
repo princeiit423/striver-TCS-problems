@@ -34,15 +34,30 @@ public class createLL {
         tail = newNode;
     }
 
+    public void addMiddle(int idx, int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = tail = newNode;
+        }
+        Node temp = head;
+        int i = 0;
+        while (i < idx - 1) {
+            temp = temp.next;
+            i++;
+        }
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
+
     public void print() {
         if (head == null) {
             System.out.println("No data found");
             return;
         }
-        Node curr = head;
-        while (curr != null) {
-            System.out.print(curr.data + "->");
-            curr = curr.next;
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + "->");
+            temp = temp.next;
         }
         System.out.println("Null");
     }
@@ -54,6 +69,7 @@ public class createLL {
         list.addFirst(3);
         list.addFirst(4);
         list.addLast(5);
+        list.addMiddle(1, 7);
         list.print();
 
     }

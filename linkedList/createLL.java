@@ -13,9 +13,11 @@ public class createLL {
 
     Node head;
     Node tail;
+    int size;
 
     public void addFirst(int data) {
         Node newNode = new Node(data);
+        size++;
         if (head == null) {
             head = tail = newNode;
             return;
@@ -26,6 +28,7 @@ public class createLL {
 
     public void addLast(int data) {
         Node newNode = new Node(data);
+        size++;
         if (head == null) {
             head = tail = newNode;
             return;
@@ -35,10 +38,12 @@ public class createLL {
     }
 
     public void addMiddle(int idx, int data) {
-        Node newNode = new Node(data);
-        if (head == null) {
-            head = tail = newNode;
+        if (idx == 0) {
+            addFirst(data);
+            return;
         }
+        Node newNode = new Node(data);
+        size++;
         Node temp = head;
         int i = 0;
         while (i < idx - 1) {
@@ -71,6 +76,7 @@ public class createLL {
         list.addLast(5);
         list.addMiddle(1, 7);
         list.print();
+        System.out.println(list.size);
 
     }
 }

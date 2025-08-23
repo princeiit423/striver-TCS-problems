@@ -15,6 +15,19 @@ public class createLL {
     Node tail;
     int size;
 
+    public void reverseList() {
+        Node prev = null;
+        Node curr = tail = head;
+        Node next;
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
+
     public int searchElement(int key) {
         if (head == null) {
             System.out.println("list empty");
@@ -136,6 +149,8 @@ public class createLL {
         list.print();
         // System.out.println(list.size);
         System.out.println(list.searchElement(3));
+        list.reverseList();
+        list.print();
 
     }
 }

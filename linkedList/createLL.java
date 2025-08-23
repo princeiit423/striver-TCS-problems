@@ -15,6 +15,23 @@ public class createLL {
     Node tail;
     int size;
 
+    public int searchElement(int key) {
+        if (head == null) {
+            System.out.println("list empty");
+            return -1;
+        }
+        Node temp = head;
+        int i = 0;
+        while (temp != null) {
+            if (temp.data == key) {
+                return i;
+            }
+            temp = temp.next;
+            i++;
+        }
+        return -1;
+    }
+
     public int removeLast() {
         if (size == 0) {
             System.out.println("list is empty");
@@ -118,6 +135,7 @@ public class createLL {
         list.removeLast();
         list.print();
         // System.out.println(list.size);
+        System.out.println(list.searchElement(3));
 
     }
 }

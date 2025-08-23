@@ -15,6 +15,43 @@ public class createLL {
     Node tail;
     int size;
 
+    public int removeLast() {
+        if (size == 0) {
+            System.out.println("list is empty");
+            return Integer.MIN_VALUE;
+        } else if (size == 1) {
+            int val = head.data;
+            head = tail = null;
+            size = 0;
+            return val;
+        }
+        Node prev = head;
+        for (int i = 0; i < size - 2; i++) {
+            prev = prev.next;
+        }
+        int val = prev.next.data;
+        prev.next = null;
+        tail = prev;
+        size--;
+        return val;
+    }
+
+    public int removeFirst() {
+        if (size == 0) {
+            System.out.println("list is empty");
+            return Integer.MIN_VALUE;
+        } else if (size == 1) {
+            int val = head.data;
+            head = tail = null;
+            size = 0;
+            return val;
+        }
+        int val = head.data;
+        head = head.next;
+        size--;
+        return val;
+    }
+
     public void addFirst(int data) {
         Node newNode = new Node(data);
         size++;
@@ -76,7 +113,11 @@ public class createLL {
         list.addLast(5);
         list.addMiddle(1, 7);
         list.print();
-        System.out.println(list.size);
+        list.removeFirst();
+        list.print();
+        list.removeLast();
+        list.print();
+        // System.out.println(list.size);
 
     }
 }

@@ -24,6 +24,16 @@ public class createLL {
         head = newNode;
     }
 
+    public void addLast(int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = tail = newNode;
+            return;
+        }
+        tail.next = newNode;
+        tail = newNode;
+    }
+
     public void print() {
         if (head == null) {
             System.out.println("No data found");
@@ -43,6 +53,7 @@ public class createLL {
         list.addFirst(2);
         list.addFirst(3);
         list.addFirst(4);
+        list.addLast(5);
         list.print();
 
     }

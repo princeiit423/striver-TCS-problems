@@ -2,28 +2,26 @@ package linkedList;
 
 public class createLL {
     class Node {
-        String data;
+        int data;
         Node next;
 
-        Node(String data) {
+        Node(int data) {
             this.data = data;
             this.next = null;
         }
     }
 
     Node head;
+    Node tail;
 
-    public void add(String data) {
+    public void addFirst(int data) {
         Node newNode = new Node(data);
         if (head == null) {
-            head = newNode;
+            head = tail = newNode;
             return;
         }
-        Node curr = head;
-        while (curr.next != null) {
-            curr = curr.next;
-        }
-        curr.next = newNode;
+        newNode.next = head;
+        head = newNode;
     }
 
     public void print() {
@@ -41,10 +39,10 @@ public class createLL {
 
     public static void main(String[] args) {
         createLL list = new createLL();
-        list.add("My");
-        list.add("Name");
-        list.add("is");
-        list.add("Faiz");
+        list.addFirst(1);
+        list.addFirst(2);
+        list.addFirst(3);
+        list.addFirst(4);
 
         list.print();
 

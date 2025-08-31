@@ -52,6 +52,14 @@ public class LL {
 
     }
 
+    public void removeFirst() {
+        if (head == null) {
+            System.out.println("no data to delete");
+            return;
+        }
+        head = head.next;
+    }
+
     public void printList() {
         if (head == null) {
             System.out.println("data not found");
@@ -72,6 +80,7 @@ public class LL {
         list.addFirst(3);
         list.addlast(4);
         list.addMiddle(5, 2);
+        list.removeFirst();
         list.printList();
 
     }

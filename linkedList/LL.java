@@ -60,6 +60,23 @@ public class LL {
         head = head.next;
     }
 
+    public void removeLast() {
+        if (head == null) {
+            System.out.println("no data to delete");
+            return;
+        }
+    }
+
+    public void size() {
+        int i = 0;
+        Node temp = head;
+        while (temp != null) {
+            temp = temp.next;
+            i++;
+        }
+        System.out.println(i);
+    }
+
     public void printList() {
         if (head == null) {
             System.out.println("data not found");
@@ -82,6 +99,7 @@ public class LL {
         list.addMiddle(5, 2);
         list.removeFirst();
         list.printList();
+        list.size();
 
     }
 

@@ -65,16 +65,17 @@ public class LL {
             System.out.println("no data to delete");
             return;
         }
+
     }
 
-    public void size() {
+    public int size() {
         int i = 0;
         Node temp = head;
         while (temp != null) {
             temp = temp.next;
             i++;
         }
-        System.out.println(i);
+        return i;
     }
 
     public void printList() {
@@ -99,7 +100,8 @@ public class LL {
         list.addMiddle(5, 2);
         list.removeFirst();
         list.printList();
-        list.size();
+        System.out.println(list.size());
+        ;
 
     }
 

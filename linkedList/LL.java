@@ -65,6 +65,13 @@ public class LL {
             System.out.println("no data to delete");
             return;
         }
+        int size = size();
+        Node temp = head;
+        for (int i = 0; i < size - 2; i++) {
+            temp = temp.next;
+        }
+        temp.next = null;
+        tail = temp;
 
     }
 
@@ -99,6 +106,7 @@ public class LL {
         list.addlast(4);
         list.addMiddle(5, 2);
         list.removeFirst();
+        list.removeLast();
         list.printList();
         System.out.println(list.size());
         ;

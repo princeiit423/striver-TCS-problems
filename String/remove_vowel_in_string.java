@@ -2,7 +2,7 @@ package String;
 
 public class remove_vowel_in_string {
     public static void remove(String s) {
-        String result = s.replaceAll("[aeiousAEIOU]", "");
+        String result = s.replaceAll("[aeiouAEIOU]", "");
         System.out.println(result);
     }
 

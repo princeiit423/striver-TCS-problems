@@ -2,7 +2,7 @@ package String;
 
 public class count_word_in_String {
     public static void countWord(String s) {
-        String[] arr = s.trim().split(" ");
+        String[] arr = s.split(" ");
 
         System.out.println(arr.length);
     }

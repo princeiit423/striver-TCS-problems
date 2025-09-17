@@ -7,7 +7,7 @@ public class ASCII_value {
     }
 
     public static void main(String args[]) {
-        char ch = 'e';
+        char ch = '1';
         value(ch);
     }
 }

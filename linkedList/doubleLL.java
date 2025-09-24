@@ -29,6 +29,26 @@ public class doubleLL {
         size++;
     }
 
+    // del fisrt
+
+    public void remFirst() {
+        if (head == null) {
+            System.out.println("list is empty");
+            return;
+        }
+        if (size == 1) {
+            head = tail = null;
+            size--;
+            return;
+        }
+
+        Node temp = head;
+        head = temp.next;
+        temp.prev = null;
+
+        size--;
+    }
+
     // print
     public void print() {
         Node temp = head;
@@ -36,6 +56,7 @@ public class doubleLL {
             System.out.print(temp.data + "<->");
             temp = temp.next;
         }
+        System.out.print("null");
     }
 
     public static void main(String args[]) {
@@ -44,6 +65,7 @@ public class doubleLL {
         dl.addFirst(2);
         dl.addFirst(3);
         dl.addFirst(4);
+        dl.remFirst();
         dl.print();
 
     }
